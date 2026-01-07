@@ -103,9 +103,7 @@ PharmacyOnline — это решение для управления аптеч�
 
 ## Модель данных
 
-* **User**: id, name, email, phone, role, loyalty_points
-* **Product**: id, sku, name, description, ingredients, contraindications, price, manufacturer, barcode, images[], attributes[], categories[]
-* **Inventory**: product_id, store_id, quantity, reserved
-* **Store**: id, name, address, working_hours, contact
-* **Order**: id, user_id, items[], total, status, payment_info, delivery_info, created_at
-* **Payment**: id, order_id, provider, status, transaction_id
+* **User**: user_id, name, email
+* **Item**: item_id, name, description, price, category
+* **Order**: order_id, user_id, status, created_at
+* **Order_Items**: id, order_id, item_id, quantity
